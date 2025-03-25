@@ -10,16 +10,7 @@ pygame.display.set_caption("Pygame Music Player")
 
 MUSIC_FOLDER = "lab_07/music"
 
-if not os.path.exists(MUSIC_FOLDER):
-    print(f"Error: The folder '{MUSIC_FOLDER}' does not exist!")
-    pygame.quit()
-    exit()
-
 songs = [f for f in os.listdir(MUSIC_FOLDER) if f.endswith((".mp3", ".wav"))]
-if not songs:
-    print("No music files found in the 'music/' folder!")
-    pygame.quit()
-    exit()
 
 current_song_index = 0
 is_playing = False
